@@ -100,7 +100,7 @@ function headerSection() {
 		bodyScroll(scrollDistance, 'easeInQuint', offsetY / 2);
 
 		// bp(>768px): collapse #navbar after the click
-		if (Boolean($('#navbar').attr('aria-expanded'))) {
+		if ($('#navbar').is('.in')) {
 			$('#navbar').collapse('toggle');
 		}
 
