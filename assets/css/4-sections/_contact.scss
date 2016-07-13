@@ -1,0 +1,36 @@
+.section-contact{
+    h2{
+        color: $white;    
+    }
+    
+    background:{
+        image: url(#{$sass-img-url}#{$contact-hero-url});
+        position: center center;
+        repeat: no-repeat;
+        color: $greyDark;
+    }
+    
+    .form-control{
+        padding: $space*1.5 $space;
+        display: inline-block;
+        font-size: 1.5rem;
+        max-width: 600px;
+    }
+    
+    .form-group{
+        margin-bottom: $space*1.5;
+    }
+    
+    textarea{
+        height: 255px;
+    }
+    
+    .help-block{
+        color: $error;
+        ul{
+            text-align: left;
+            padding: 5px;
+            list-style-position: inside;
+        }
+    }
+}

@@ -1,0 +1,46 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Awesome Title
+description:  "A responsive Jekyll theme for agency studio."
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://yourdomain.com" # the base hostname & protocol for your site
+twitter_username: jekyllrb
+github_username:  jekyll
+
+# Build settings
+markdown: kramdown
+
+# Server
+port: 5555
+
+# Colors
+
+brandColor:             '#fed136'
+backgroundColor:        '#fff'
+textColor:              '#b4bcc2'
+
+# Logo/Hero
+
+hero-img: 'hero.jpg'
+
+# Pathsite
+sass-img-path: ../img/
+html-img-path: assets/img/
+
+# Sass
+sass: 
+  sass_dir: assets/css/
+  style: nested
+  
+
+# Exclude files
+exclude: [
+    .gitignore,
+    .sass-cache
+]

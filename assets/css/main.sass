@@ -1,0 +1,27 @@
+---
+---
+
+/* These Sass variables are from CONFIG YML FILES   ------------------------------*/
+/* Logo/Hero */
+//$logo-url:          '{{ site.logo }}'
+$hero-url: '{{ site.hero-img }}'
+$contact-hero-url: '{{ site.data.layout.contact.hero-img}}'
+
+/* Colors */
+$color-primary:       {{ site.brandColor}}
+$color-bg:   {{ site.backgroundColor}}
+$color-base:        {{ site.textColor }}
+
+/* Path */
+$sass-img-url: '{{ site.sass-img-path}}'
+
+/* Animation */
+//$client-animation:  {{ site.clientAnimation }}
+
+/* Image Urls - need be translated by liquid and used in sass files, import files will not be translated by liquid */
+
+@import '1-global/-global-dir'
+@import '2-tools/-tools-dir'
+@import '3-base/-base-dir'
+@import '4-sections/-sections-dir'
+

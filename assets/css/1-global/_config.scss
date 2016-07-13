@@ -1,0 +1,150 @@
+/* Breakpoints
+ * -------------------------------*/
+$content-width:              1100px;
+$screen-xs:                  480px;
+$screen-sm:                  768px;
+$screen-md:                  992px;
+$screen-lg:                  1100px;
+
+$break-points: (
+    'xs': (min-width: $screen-xs),
+    'sm': (min-width: $screen-sm),
+    'md': (min-width: $screen-md),
+    'lg': (min-width: $screen-lg)
+);
+
+
+/* Color 
+ * ------------------------------*/
+// Descriptive colors, todo collect some regular colors, can be repleaced in bootstrap variables
+$white: #fff;
+$black: #000;
+$grey: #333;
+$greyDark: #222;
+$greyLight: #555;
+$gallery: #eee;
+$alto: #ddd;
+$mercury: #e9e9e9;
+$alabaster: #f7f7f7;
+$alabaster-light:#f1f1f1;
+$pelorous: #3dadb2;
+$transparent: transparent;
+$error: palevioletred;
+
+// Color usage 
+$color-primary-light: adjust-hue(lighten($color-primary,  4%),-1%);
+$color-primary-dark: darken($color-primary, 4%);
+$color-selection: $color-primary;
+$color-border: $alto;
+/* config 在tool 之前执行，所以警告框的颜色拿不到这个颜色，需要从bootstrap变量里拿过来使用 */
+$brand-danger:          #d9534f;
+$brand-success:         #5cb85c;
+/* Spacing 
+ * ------------------------------*/
+$space: 20px;
+$spaceDouble: 40px;
+
+/* Font 
+ * ------------------------------*/
+$font-family-primary: 'Roboto Slab',sans-serif;
+$font-family-secondary: 'Montserrat',sans-serif;
+$font-family-third: 'Kaushan Script',sans-serif;
+
+$font-weight-regular: 400;
+$font-weight-semi: 600;
+$font-weight-bold: 700;
+
+// BOOTSTRAP OVERRIDE
+$font-family-sans-serif: $font-family-primary;
+$font-size-base:   13px;        // 13px body 定基本字体大小， 10px html 便于计算
+
+// Font Awesome
+$fa-font-path:  "2-tools/fonts";
+$fa-css-prefix:       fa;
+
+/* Typography 
+ * -------------------------*/
+
+// BOOTSTRAP OVERRIDE
+$headings-font-family: $font-family-secondary;
+$font-size-h1: 7.5rem;
+$font-size-h2: 3.8rem;
+$font-size-h3: 1.9rem;
+$font-size-h4: 1.6rem;
+
+/* Link 
+ * -----------------------------*/
+// BOOTSTRAP OVERRIDE
+$link-color: $color-primary;
+$link-hover-color: $color-primary-light;
+$link-hover-decoration: none;
+
+
+/* feedback states
+ * -----------------------------*/
+$state-danger-text: $white;
+$state-danger-bg: $brand-danger;
+$alert-danger-border: $brand-danger;
+
+$state-success-bg: $brand-success;
+$state-success-text: $white;
+$alert-success-border: $brand-success;
+
+/* Buttons 
+ * -------------------------------*/
+// BOOTSTRAP OVERRIDE
+$btn-primary-color:              $white;
+$btn-primary-bg:                 $color-primary;
+
+
+
+
+/* Navbar  
+ * -------------------------------*/
+// BOOTSTRAP OVERRIDE
+$navbar-height:                    70px;
+$navbar-default-bg:                $transparent;
+
+// Navbar links 
+$navbar-default-link-color:                $white;
+$navbar-default-link-hover-color:          $color-primary-dark;
+$navbar-default-link-hover-bg:             $transparent;
+$navbar-default-link-active-color:         $white;
+$navbar-default-link-active-bg:            $color-primary;
+
+// Navbar toggle
+$navbar-default-toggle-hover-bg:           $alto;
+$navbar-default-toggle-icon-bar-bg:        $white;
+$navbar-default-toggle-border-color:       transparent;
+
+//Point where the navbar start to become uncollapsed.
+$grid-float-breakpoint:     $screen-sm;
+
+
+
+
+/* Tooltip  
+ * -------------------------------*/
+// BOOTSTRAP OVERRIDE
+$tooltip-bg:                  darken($color-primary, 10%);
+
+
+
+
+/* Dl 
+ * -------------------------------*/
+// BOOTSTRAP OVERRIDE
+$dl-horizontal-offset:        0;
+
+
+/* Custom */
+$circle-diameter-xs: 80px;
+$circle-diameter-sm: 120px;
+$circle-diameter-md: 140px;
+$circle-diameter-lg: 160px;
+
+$circle-diameter: (
+    'sm': $circle-diameter-sm,
+    'md': $circle-diameter-md,
+    'lg': $circle-diameter-lg
+);

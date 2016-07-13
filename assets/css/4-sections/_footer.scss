@@ -1,0 +1,32 @@
+.section-footer{
+    @extend %align-center; 
+    font-family: $font-family-secondary;
+    padding: $spaceDouble 0 $space;
+    color: $greyDark;
+    font-size: 1.6rem;
+    
+    .fa{
+        margin: 0 5px;
+        color: $white;
+        border-radius: 50%;
+        background-color: $greyDark;
+        @include square(40px);
+        line-height: 40px;
+        @extend %align-center;
+    }
+    
+    .fa-btns{
+            margin-bottom: $space;
+    }
+      
+    @include breakpoint(sm){
+        .copyright{
+             text-align: left;
+        }
+        
+        .terms{
+            text-align: right;
+        }
+    }
+    
+}

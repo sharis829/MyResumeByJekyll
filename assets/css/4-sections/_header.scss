@@ -1,0 +1,32 @@
+header{
+    padding: $spaceDouble*4 0 $space;
+    @include breakpoint(sm){
+        padding: $spaceDouble*8 0 $spaceDouble*2;
+    }
+    background:{
+        image: url(#{$sass-img-url}#{$hero-url}); 
+        repeat: no-repeat;
+        size: cover;
+        position: 50% 30%;
+    }
+    
+    .hero-content{
+        @extend %align-center;
+        padding: 0 $space;
+        
+        /* xsmall screen has small space around by default */
+        @include breakpoint(xs){
+            padding: 0 $spaceDouble;
+        }
+    }
+    
+    p{
+        font:{
+            family: $font-family-third;
+            size: 3.5rem;
+            weight: 400;
+        }
+        letter-spacing: 0.2rem;
+        color: $white;
+    }
+}

@@ -1,0 +1,15 @@
+<section id='service' class='section-service'>
+	<div class='container-fluid'>
+		<h2>{{ site.data.layout.service.title }}</h2>
+		<p class='section-description'>{{ site.data.layout.service.description }}</p>
+		<div class='row'>
+			{% for item in site.data.layout.service.items %}
+				<div class='col-md-4'>
+					<span class='fa fa-{{ item.icon }} fa-4x'></span>
+					<h3>{{ item.name }}</h3>
+					<p>{{ item.detail }}</p>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</section>

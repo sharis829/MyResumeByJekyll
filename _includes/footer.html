@@ -1,0 +1,16 @@
+<footer id='footer' class="section-footer">
+	<div class='container-fluid'>
+		<div class='col-sm-4'>
+			<p>{{ site.data.layout.footer.copyright }}</p>
+		</div>
+		<div class='col-sm-4 fa-btns'>
+			{% for item in site.data.layout.footer.links %}
+				<span class='fa fa-{{item}} fa-1x'></span>
+			{% endfor %}
+		</div>
+		<div class='col-sm-4 terms'>
+			<a href='#'>{{ site.data.layout.footer.policy }}</a> 
+		    <a href='#'>{{ site.data.layout.footer.terms }}</a>
+		</div>
+	</div>
+</footer>

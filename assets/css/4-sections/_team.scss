@@ -1,0 +1,47 @@
+.section-team{
+	background-color: $alabaster;
+	img{
+		border-radius: 50%;
+		border: 8px solid $white;
+	}
+	
+	figure{
+		margin-bottom: $spaceDouble*2;
+		
+		@include breakpoint(sm){
+			margin-bottom: 0;
+		}
+	}
+	
+	figcaption{
+		font-size: 2rem;
+	}
+	.fa{
+		@include square(40px);
+		background-color: $greyDark;
+		color: $white;
+		border-radius: 50%;
+		line-height: 40px;
+		margin: 0 $space/3;
+	}
+	
+	h3{
+		padding-bottom: $space/4;
+	}
+	p{
+		font-size: 1.4rem;
+	}
+	
+	.more{
+		p{
+			font-size: 1.6rem;
+			padding: $spaceDouble 0 0;
+			margin: 0;
+			line-height: 2;
+		}
+		
+		&.container-fluid{
+			max-width: $screen-sm;
+		}
+	}
+}

@@ -1,0 +1,26 @@
+<section id='team' class='section-team'>
+	<div class='container-fluid'>
+		<h2>{{site.data.layout.team.title }}</h2>
+		<p class='section-description'>{{site.data.layout.team.description }}</p>		
+		{% for member in site.data.layout.team.members %}
+			<div class='col-sm-4'>
+				<figure>
+					<img src='{{ site.html-img-path }}{{ member.avatar }}'>
+					<figcaption>
+						<h3>{{ member.name }}</h3>
+						<p> {{ member.title }}</p>
+						<footer>
+							<span class='fa fa-twitter'></span>
+							<span class='fa fa-facebook'></span>
+							<span class='fa fa-stack-overflow'></span>
+						</footer>
+					</figcaption>
+				</figure>
+			</div>
+		{% endfor %}
+		
+	</div>
+	<div class='container-fluid more'>
+			<p>{{site.data.layout.team.more}}</p>
+		</div>
+</section>

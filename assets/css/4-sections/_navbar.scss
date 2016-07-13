@@ -1,0 +1,57 @@
+//
+// Styles for header
+//
+.navbar{
+    border: 0;
+    background-color: rgba($greyDark, 1);
+    
+    /* 仅在展开状态发生动画*/
+    @include breakpoint(sm){
+        @include transition(all 0.5s);
+        transform: translateY(15px);
+        background-color: rgba($greyDark, 0);
+    }
+    
+    .navbar-toggle{
+        background-color: $color-primary;
+    }
+    
+    .navbar-brand{
+        font: {
+            family: $font-family-third;
+            size: 3rem;
+        }
+        color: $color-primary;
+        padding-top: $space*1.5;
+        
+        @include breakpoint(sm){
+            transition: all 0.5s;
+        }
+    }
+    
+    li>a{
+        font:{
+            family: $font-family-secondary;
+            size: 1.5rem;
+        }
+        @extend %uppercase;
+        letter-spacing: 0.08rem;
+        padding-top: 20px;
+        padding-bottom: 20px;
+            
+        @include breakpoint(sm){
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+    }
+    
+    &.animate{
+       background-color: rgba($greyDark, 1);
+       transform: translateY(0px);
+       
+        .navbar-brand{
+            font-size: 2.5rem;
+        }
+    }
+}
+

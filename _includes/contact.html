@@ -1,0 +1,40 @@
+<section id='contact' class='section-contact'>
+	<div class='container-fluid'>
+		<h2>{{ site.data.layout.contact.title}}</h2>
+		<p class='section-description'>{{ site.data.layout.contact.description }}</p>
+
+		<form novalidate="">
+			<div class='row'>
+				<div class='col-md-6'>
+					{% for item in site.data.layout.contact.inputItems %}
+					<div class="control-group form-group">
+						<label for="input-{{ item.name }}" class='control-label sr-only'>{{ item.placeholder }}</label>
+						<div class="controls">
+
+							<input type="{{ item.type }}" {% if {{item.pattern}} %} pattern="{{item.pattern}}" {% endif %} class="form-control" id="input-{{ item.name }}" placeholder="{{ item.placeholder }}" required data-validation-required-message="{{item.required-msg}}{{item.name}}"
+								{% if {{item.pattern-message}} %} data-validation-pattern-message='{{item.pattern-message}}' {% endif %}>
+							<p class="help-block"></p>
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+
+				<div class='col-md-6'>
+					{% for item in site.data.layout.contact.textareaItems %}
+					<div class="control-group form-group">
+						<label for="input-{{ item.name }}" class='control-label sr-only'>{{ item.placeholder }}</label>
+						<div class="controls">
+							<textarea id="input-{{ item.name }}" class="form-control" rows="3" placeholder="{{ item.placeholder }}" required data-validation-required-message="{{item.required-msg}}{{item.name}}"></textarea>
+							<p class="help-block"></p>
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+			<div class='row'>
+				<button type="submit" class="btn btn-primary">{{ site.data.layout.contact.btn-text}}</button>
+			</div>
+			<div id='success' class='row'>
+			</div>
+	</div>
+</section>

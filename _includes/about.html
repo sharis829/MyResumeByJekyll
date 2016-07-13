@@ -1,0 +1,35 @@
+<section id='about' class='section-about'>
+	<div class='container-fluid'>
+		<h2>{{ site.data.layout.about.title }}</h2>
+		<p class='section-description'>{{ site.data.layout.about.description }}</p>
+		<ul class='list-unstyled'>
+			{% for item in site.data.layout.about.items %}
+			<li>
+				<figure>
+					<div class='figure-img'>
+						<img src='{{site.html-img-path }}{{ item.thumb}}'>
+					</div>
+
+					<figcaption>
+						<h3>{{ item.year }}
+							<strong> {{ item.title }}</strong></h3>
+
+						<p> {{ item.introduction }}</p>
+					</figcaption>
+			</li>
+			{% endfor %}
+			<li>
+				<figure>
+					<div class='figure-img'>
+						<div class='img'>
+							<h3>
+								{{ site.data.layout.about.last-item-text}}
+							</h3>
+						</div>
+					</div>
+					<figcaption></figcaption>
+				</figure>
+			</li>
+		</ul>
+	</div>
+</section>

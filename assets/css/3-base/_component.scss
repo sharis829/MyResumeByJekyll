@@ -1,0 +1,97 @@
+// 各种组件
+/* Form
+ ------------------------------------ */
+
+.form {
+    padding: $spaceDouble $space;
+    background: $color-bg;
+
+    @include breakpoint('sm'){
+        padding: $spaceDouble*2 $space;
+    }
+    
+    input,
+    textarea {
+        @extend %form-fields;
+    }
+    textarea {
+        height: 100px;
+    }
+    .btn {
+        width: auto;
+        border: 0;
+        border-radius: 0;
+    }
+    .form-field {
+        margin-bottom: 10px;
+    }
+}
+
+
+/* Icon - Fontawesome Icons 
+ ------------------------------------ */
+
+.fa{
+    color: $color-primary;
+}
+
+/* ---------------------------------
+ * Expandable Box
+ */
+.expandable-box {
+    position: relative;
+     -webkit-perspective: none;
+}
+.expandable-box-top {
+    padding: $space;
+    background-color: darken($color-primary, 2%);
+    @include transition(0.5s all ease);
+    transform: translate(0px, 0px);
+    .expandable-box:hover & {
+        transform: translate(0px, -45px);
+    }
+}
+.expandable-box-bottom {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    @include transition(0.5s all ease);
+    transform: translate(0px, 0px) rotateX(90deg);
+    transform-origin: left top; /*top 不产生透视*/
+    .expandable-box:hover & {
+        transform: translate(0px, -45px) rotateX(0); /* 90deg = 参照 top 边 绕x轴 往里逆时针旋转90度， 同时Y轴往上走45px，transform 需要分步拆解 */
+    }
+}
+
+
+
+/* -------------------------
+ *  Magnific Popup
+ */
+
+.mfp-title{
+    padding-top: $space;
+    padding-right: 0;
+    color: $mercury;
+    em{
+        color: $color-primary;
+        margin-right: $space;
+    }
+}
+
+
+/**
+     * buttons
+     * 
+ */
+.btn-primary{
+   font:{
+            size: 1.8rem;
+            family: $font-family-secondary;
+            weight: bold;
+        }
+        
+        padding: $space $spaceDouble; 
+        margin: $spaceDouble 0;
+        @extend %uppercase;
+}

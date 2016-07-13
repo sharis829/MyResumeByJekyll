@@ -1,0 +1,11 @@
+@function getCircleSize($mq){
+    
+    @if($mq == 'md'){
+        @return  $middle-circle-diameter;
+    }
+        
+    @else{
+        @return  $default-circle-diameter;
+    }
+        
+}

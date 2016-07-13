@@ -1,0 +1,25 @@
+<section id='portfolio' class='section-portfolio'>
+	<div class='container-fluid'>
+		<h2>{{ site.data.layout.portfolio.title }}</h2>
+		<p class='section-description'>{{ site.data.layout.portfolio.description}}</p>
+		
+		<div class='row'>
+			{% for item in site.data.layout.portfolio.items %}
+			<div class='col-sm-6 col-md-4'>
+				<a href='{{ site.html-img-path }}{{ item.large }}' data-description='{{ item.description }}' data-client='{{ item.client }}' data-date='{{ item.date }}' data-service='{{ item.service }}'>
+					<div class='layer'><span class='fa fa-plus fa-5x'></span></div>
+					<figure>
+						<img src='{{ site.html-img-path }}{{ item.thumb }}' alt='{{ item.title }}'>
+						<figcaption>
+							<h3>{{ item.title }}</h3>
+							<p> {{ item.type }}</p>
+						</figcaption>
+					</figure>
+					
+					
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</section>

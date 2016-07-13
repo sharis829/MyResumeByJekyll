@@ -1,0 +1,99 @@
+/* Basic Styles
+ ------------------------------------ */
+html{
+    background-color: black;
+}
+
+body {
+    background-color: $color-bg;
+    color: $color-base;
+    position: relative; /* for scroll data spy*/
+}
+img {
+    /* img 都为自适应 */
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+/*  Typography presets - sharis: h1~h3 font size and family using bootstrap's presets'
+  ------------------------------------  */
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+}
+h1 {
+    color: $white;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+h2 {
+    padding: $space 0;
+    color: $greyDark;
+    @extend %uppercase;
+    font-weight: bold;
+}
+h3 {
+    font-family: $font-family-secondary;
+    font-weight: bold;
+    color: $greyDark;
+    padding: $space 0;
+}
+
+h4{
+    
+}
+
+p {
+    margin: 0 0 $space;
+}
+em {
+    font-style: italic;
+}
+strong {
+    font-weight: bold;
+}
+/* Links
+ ------------------------------------ */
+a {
+    outline: 0;
+    &:hover,
+    &:focus {
+        outline: none;
+    }
+}
+/* Selection Color
+ ------------------------------------ */
+ ::selection {
+    background-color: $color-selection;
+}
+
+/* SVG
+ ------------------------------------ */
+svg {
+    height: 100%;
+    width: 100%;
+}
+/* Section
+ ---------------------------------*/
+section {
+    padding: $space*6 0;
+    @extend %align-center;
+}
+section:nth-child(odd) {
+    //  background-color: $color-bg;
+}
+.section-description {
+    font: {
+        size: 1.6rem;
+        style: italic;
+    }
+    margin-bottom: $space* 4;
+}
+/*
+ * Container 
+ */
+.container-fluid {
+    max-width: $content-width;
+}

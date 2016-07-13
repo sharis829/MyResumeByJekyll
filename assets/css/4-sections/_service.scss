@@ -1,0 +1,13 @@
+.section-service{
+    @extend %align-center;
+    font-size: 1.5rem;
+    
+    .fa{
+        color: $white;
+        background: $color-primary;
+        border-radius: 100%;
+        @include size(100px, 100px);
+        line-height: 100px;
+        
+    }
+}

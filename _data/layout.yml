@@ -1,0 +1,213 @@
+###
+###		Header
+###
+
+### navbar 
+navbar-menus: [Service, Portfolio, About, Team, Contact]
+
+### hero
+hero:
+  title: "It's nice to meet you"
+  subtitle: Welcome To Our Studio!
+  btn-text: Tell Me More
+
+
+### 
+### Service
+###
+service:
+  title: SERVICES
+  description: 'Lorem ipsum dolor sit amet consectetur.'
+  items:
+    - icon: 'shopping-cart'
+      name: 'E-Commerce'
+      detail: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxit.'
+    
+    - icon: 'laptop'
+      name: 'Responsive Design'
+      detail: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.'
+      
+    - icon: 'lock'
+      name: 'Web Security'
+      detail: 'Lorem ipsum dolor sit amet, consectetu harum ex magni, dicta impedit.'
+
+
+### 
+### Portfolio
+###
+portfolio:
+  title: portfolio
+  description: 'Lorem ipsum dolor sit amet consectetur.'
+  items:
+    - thumb: 'portfolio\dreams-thumbnail.png'
+      large: 'portfolio\dreams.png'
+      title: Dreams
+      type: Website Design
+      description: 'Lorem ipsum dolor sit amet, usu cu alterum nominavi lobortis. At duo novum diceret. Tantas apeirian vix et, usu sanctus postulant inciderint ut, populo diceret necessitatibus in vim. Cu eum dicam feugiat noluisse.'
+      client: 'Start Bootstrap'  
+      date: April 2014  
+      service: Web Development
+    
+    - thumb: 'portfolio\escape-thumbnail.png'
+      large: 'portfolio\escape.png'
+      title: Escape
+      type: Website Design
+      description: 'Lorem ipsum dolor sit amet, usu cu alterum nominavi lobortis. At duo novum diceret. Tantas apeirian vix et, usu sanctus postulant inciderint ut, populo diceret necessitatibus in vim. Cu eum dicam feugiat noluisse.'
+      client: 'Start Bootstrap'  
+      date: April 2014  
+      service: Web Development
+      
+      
+    - thumb: 'portfolio\golden-thumbnail.png'
+      large: 'portfolio\golden.png'
+      title: Golden
+      type: Website Design
+      description: 'Lorem ipsum dolor sit amet, usu cu alterum nominavi lobortis. At duo novum diceret. Tantas apeirian vix et, usu sanctus postulant inciderint ut, populo diceret necessitatibus in vim. Cu eum dicam feugiat noluisse.'
+      client: 'Start Bootstrap  '
+      date: April 2014  
+      service: Web Development
+      
+    - thumb: 'portfolio\treehouse-thumbnail.png'
+      large: 'portfolio\treehouse.png'
+      title: Treehouse
+      type: Website Design
+      description: 'Lorem ipsum dolor sit amet, usu cu alterum nominavi lobortis. At duo novum diceret. Tantas apeirian vix et, usu sanctus postulant inciderint ut, populo diceret necessitatibus in vim. Cu eum dicam feugiat noluisse.'
+      client: 'Start Bootstrap ' 
+      date: April 2014  
+      service: Web Development
+      
+      
+    - thumb: 'portfolio\roundicons-thumbnail.png'
+      large: 'portfolio\roundicons.png'
+      title: Round Icons
+      type: Website Design
+      description: 'Lorem ipsum dolor sit amet, usu cu alterum nominavi lobortis. At duo novum diceret. Tantas apeirian vix et, usu sanctus postulant inciderint ut, populo diceret necessitatibus in vim. Cu eum dicam feugiat noluisse.'
+      client: 'Start Bootstrap ' 
+      date: April 2014  
+      service: Web Development
+      
+      
+    - thumb: 'portfolio\startup-framework-thumbnail.png'
+      large: 'portfolio\startup-framework.png'
+      title: Startup Framework
+      type: Website Design
+      description: 'Lorem ipsum dolor sit amet, usu cu alterum nominavi lobortis. At duo novum diceret. Tantas apeirian vix et, usu sanctus postulant inciderint ut, populo diceret necessitatibus in vim. Cu eum dicam feugiat noluisse.'
+      client: 'Start Bootstrap  '
+      date: April 2014  
+      service: Web Development
+  
+### 
+### About
+###
+
+about:
+  title: About
+  description: 'Lorem ipsum dolor sit amet consectetur.'
+  items:
+      - year: 2009-2011
+        title: Our Humble Beginnings
+        thumb: 'about\1.jpg'
+        introduction: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!'
+      
+      - year: MARCH 2011
+        title: An Agency is Born
+        thumb: 'about\2.jpg'
+        introduction: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!'
+      
+      - year: DECEMBER 2012
+        title: Transition to Full Service
+        thumb: 'about\3.jpg'
+        introduction: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!'
+      
+      - year: JULY 2014
+        title: Phase Two Expansion
+        thumb: 'about\4.jpg'
+        introduction: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!'
+  
+  last-item-text: be part of our story    
+
+    
+### 
+### Team
+###
+
+team:
+  title: OUR AMAZING TEAM
+  description: 'Lorem ipsum dolor sit amet consectetur.'
+  more: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.'    
+  members: 
+    - name: Kay Garland
+      title: Lead Designer
+      avatar: 'team\1.jpg'
+    
+    - name: Larry Parker
+      title: Lead Marketer
+      avatar: 'team\2.jpg'
+      
+    - name: Diana Petersen
+      title: Lead Developer  
+      avatar: 'team\3.jpg'
+  
+  
+### 
+### Contact
+###
+  
+contact:
+  title: contact us
+  description: 'Lorem ipsum dolor sit amet consectetur.'
+  hero-img: 'map-image.png'
+  inputItems:
+     - name: 'name'
+       placeholder: 'Your Name *'
+       type: 'text'
+       required-msg: 'Please enter your '
+       
+     - name: 'email'
+       placeholder: 'Your Email *'
+       type: 'email'
+       required-msg: 'Please enter your '
+       
+     - name: 'phone'
+       placeholder: 'Your Phone *'
+       type: 'text'
+       pattern: '[0-9]{11}'
+       required-msg: 'Please enter your '
+       pattern-message: 'Please enter the correct phone number.'
+       
+  textareaItems:
+     - name: 'message'
+       placeholder: 'Your Message *'
+       required-msg: 'Please enter your '
+       
+  btn-text: 'Send Message'
+  
+  
+### 
+### Footer
+###
+footer:
+   copyright: 'Copyright © Awesome Title 2014' 
+   links: 
+       - 'twitter'
+       - 'facebook'
+       - 'stack-overflow'
+       - 'bitbucket'
+       - 'github'
+   policy: Privacy Policy 
+   terms:  Terms of Use
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

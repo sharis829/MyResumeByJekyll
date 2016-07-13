@@ -1,0 +1,46 @@
+.section-portfolio{
+    background-color: $alabaster;
+    a{
+        display: block;
+        position: relative;
+    }
+    .layer{
+        background-color: rgba($color-primary,0.9);
+        position: absolute; /*todo in bourbon*/
+        top: 0;
+        bottom: 95px;
+        left: 0;
+        right: 0;
+        opacity: 0;
+        transition: all 0.8s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        &:hover{
+            opacity: 1;
+        }
+    }
+    
+    .fa{
+        color: $white;
+    }
+    
+    figure{
+        margin-bottom: $space;
+        padding-bottom: $space/2;
+        background-color: $white;
+    }
+    
+    figcaption{
+        h3{
+            padding-bottom: $space/4;
+        }
+        
+        p{
+            color: $color-base;
+            font-size: 1.5rem;
+            font-style: italic;
+        }
+    }
+}
