@@ -190,7 +190,7 @@ team:
 ###
   
 contact:
-  title: contact us
+  title: contact me
   description: 'Lorem ipsum dolor sit amet consectetur.'
   hero-img: 'map-image.png'
   inputItems:
