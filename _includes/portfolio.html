@@ -2,24 +2,56 @@
 	<div class='container-fluid'>
 		<h2>{{ site.data.layout.portfolio.title }}</h2>
 		<p class='section-description'>{{ site.data.layout.portfolio.description}}</p>
-		
 		<div class='row'>
 			{% for item in site.data.layout.portfolio.items %}
-			<div class='col-sm-6 col-md-4'>
-				<a href='{{ site.html-img-path }}{{ item.large }}' data-description='{{ item.description }}' data-client='{{ item.client }}' data-date='{{ item.date }}' data-service='{{ item.service }}'>
-					<div class='layer'><span class='fa fa-plus fa-5x'></span></div>
-					<figure>
+			<div class='col-sm-6 col-md-4 portfolio-item'>
+				<figure>
+					<a data-toggle="modal" href="#myModal{{ forloop.index }}">
 						<img src='{{ site.html-img-path }}{{ item.thumb }}' alt='{{ item.title }}'>
-						<figcaption>
-							<h3>{{ item.title }}</h3>
-							<p> {{ item.type }}</p>
-						</figcaption>
-					</figure>
-					
-					
-				</a>
+						<div class='layer'>
+							<span class='fa fa-plus fa-5x'></span>
+						</div>
+					</a>
+					<figcaption>
+						<h3>{{ item.title }}</h3>
+						<p> {{ item.type }}</p>
+					</figcaption>
+				</figure>
 			</div>
 			{% endfor %}
 		</div>
 	</div>
 </section>
+
+{% for item in site.data.layout.portfolio.items %}
+<!-- Modal -->
+<div class="modal fade modal-portfolio" id="myModal{{ forloop.index }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<a href class="btn-close" data-dismiss="modal" aria-label="Close">
+				<div class='lr'>
+					<div class='rl'>
+					</div>
+				</div>
+				
+	</a>
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="container-fluid">
+				<div class='row'>
+					<div class='col-sm-8 col-sm-offset-2'>
+						<h4 class="modal-title" id="myModalLabel">{{ item.title }}</h4>
+						<hr>
+						<img src='{{ site.html-img-path }}{{ item.large }}' />
+						<p>{{ item.description }}</p>
+						<ul class='meta-data list-unstyled'><li>Client: <em>{{ item.client }}</em></li>
+							<li>Date: <em>{{ item.date }}</em></li>
+							<li>Service: <em>{{ item.service }}</em></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<button type="button" class="btn btn-default btn-lg" data-dismiss="modal">
+				<span>&times;</span>  Close</button>
+		</div>
+	</div>
+</div>
+{% endfor %}

@@ -4,74 +4,6 @@ $(document).ready(function() {
 	contactSection();
 });
 
-function portfolioSection() {
-	$('.section-portfolio .row').magnificPopup({
-		delegate: 'a',
-		type: 'image',
-		image: {
-			markup: '<div class="mfp-figure something-else">' +
-				'<button class="mfp-close"></button>' +
-				'<figure>' +
-				'<img class="mfp-img" />' +
-				'<figcaption>' +
-				'<div class="mfp-bottom-bar">' +
-				'<div class="mfp-title"></div>' +
-				'<div class="mfp-counter"></div>' +
-				'</div>' +
-				'</figcaption>' +
-				'</figure>' +
-				'</div>',
-			titleSrc: function(item) {
-				return '<p>' + item.el.data('description') + '</p>' +
-					'<p>Client: <em>' + item.el.data('client') + '</em>' +
-					'Date: <em>' + item.el.data('date') + '</em>' +
-					'Service: <em>' + item.el.data('service') + '</em>' +
-					'</p>';
-			}
-		},
-		tLoading: 'Loading image #%curr%...',
-		mainClass: 'mfp-img-mobile',
-		zoom: {
-			enabled: true,
-			duration: 300,
-			easing: 'ease-in-out'
-		},
-		gallery: {
-			enabled: true,
-			navigateByImgClick: true,
-			preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
-		},
-		callbacks: {
-			close: function() {
-				location.hash = "";
-			},
-			change: function() {
-				console.log('Content changed');
-
-				location.hash = "gallery-" + this.currItem.el.data("image_id");
-			}
-
-		}
-	});
-
-	loadGalleryDeepLink();
-
-	function loadGalleryDeepLink() {
-		var prefix = "#gallery-";
-		var h = location.hash;
-
-		if (document.g_magnific_hash_loaded === undefined && h.indexOf(prefix) === 0) {
-			h = h.substr(prefix.length);
-			var $img = $('*[data-image_id="' + h + '"]');
-
-			if ($img.length) {
-				document.g_magnific_hash_loaded = true;
-				$img.parents().find('.popup-gallery').magnificPopup("open", $img.index());
-			}
-		}
-	}
-}
-
 function headerSection() {
 
 	var offsetY = $('.navbar').height() / 2;
@@ -82,13 +14,8 @@ function headerSection() {
 		offset: offsetY
 	});
 
-	$('header .btn-primary').on('click', function() {
-		var scrollDistance = $('#service')[0].offsetTop;
-		bodyScroll(scrollDistance, 'easeInQuint', offsetY / 2);
-	});
-
 	/* nav bar click event */
-	$('.navbar a').on('click', function(e) {
+	$('a.page-scroll').on('click', function(e) {
 
 		var $this = $(this),
 			sectionId = $this.attr('href'),
@@ -97,12 +24,19 @@ function headerSection() {
 		// avoid the page refresh
 		e.preventDefault();
 		// scroll the body
-		bodyScroll(scrollDistance, 'easeInQuint', offsetY / 2);
+		pageScroll(scrollDistance, 'easeInOutExpo', offsetY / 2);
 
-		// bp(>768px): collapse #navbar after the click
-		if ($('#navbar').is('.in')) {
-			$('#navbar').collapse('toggle');
-		}
+		// 是否 可折叠的展开状态，如是 就 toggle
+//		if ($('#navbar').is('.in')) {
+////			$('#navbar').collapse('toggle');
+//			//模拟点击toggle button
+//			$('.navbar-toggle').click();
+//		}
+//		
+		/*点击 menu item 后，只触发可见的toggle button*/
+		$('.navbar-collapse a').on('click', function(){
+			$('.navbar-toggle:visible').click();
+		});
 
 	});
 
@@ -126,9 +60,9 @@ function headerSection() {
 			$activeNavItem; // 要被激活的nav item
 
 		/* scroll and animate the nav bar*/
-		var serviceOffsetTop = $('.section-service').offset().top,
+		var offsetTop = $('.section-about').offset().top,
 			$navbar = $('.navbar');
-		if (serviceOffsetTop && scrollTop >= serviceOffsetTop / 2 && $(window).width() >= 768) {
+		if (offsetTop && scrollTop >= offsetTop / 2 && $(window).width() >= 768) {
 			$navbar.addClass('animate');
 		} else {
 			$navbar.removeClass('animate');
@@ -137,11 +71,79 @@ function headerSection() {
 	});
 }
 
-function bodyScroll(scrollDistance, easingEffect, offset) {
+function portfolioSection() {
+//	$('.section-portfolio .row').magnificPopup({
+//		delegate: 'a',
+//		type: 'image',
+//		image: {
+//			markup: '<div class="mfp-figure something-else">' +
+//				'<button class="mfp-close"></button>' +
+//				'<figure>' +
+//				'<img class="mfp-img" />' +
+//				'<figcaption>' +
+//				'<div class="mfp-bottom-bar">' +
+//				'<div class="mfp-title"></div>' +
+//				'<div class="mfp-counter"></div>' +
+//				'</div>' +
+//				'</figcaption>' +
+//				'</figure>' +
+//				'</div>',
+//			titleSrc: function(item) {
+//				return '<p>' + item.el.data('description') + '</p>' +
+//					'<p>Client: <em>' + item.el.data('client') + '</em>' +
+//					'Date: <em>' + item.el.data('date') + '</em>' +
+//					'Service: <em>' + item.el.data('service') + '</em>' +
+//					'</p>';
+//			}
+//		},
+//		tLoading: 'Loading image #%curr%...',
+//		mainClass: 'mfp-img-mobile',
+//		zoom: {
+//			enabled: true,
+//			duration: 300,
+//			easing: 'ease-in-out'
+//		},
+//		gallery: {
+//			enabled: true,
+//			navigateByImgClick: true,
+//			preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+//		},
+//		callbacks: {
+//			close: function() {
+//				location.hash = "";
+//			},
+//			change: function() {
+//				console.log('Content changed');
+//
+//				location.hash = "gallery-" + this.currItem.el.data("image_id");
+//			}
+//
+//		}
+//	});
+//
+//	loadGalleryDeepLink();
+//
+//	function loadGalleryDeepLink() {
+//		var prefix = "#gallery-";
+//		var h = location.hash;
+//
+//		if (document.g_magnific_hash_loaded === undefined && h.indexOf(prefix) === 0) {
+//			h = h.substr(prefix.length);
+//			var $img = $('*[data-image_id="' + h + '"]');
+//
+//			if ($img.length) {
+//				document.g_magnific_hash_loaded = true;
+//				$img.parents().find('.popup-gallery').magnificPopup("open", $img.index());
+//			}
+//		}
+//	}
+}
+
+function pageScroll(scrollDistance, easingEffect, offset) {
 
 	var offset = offset || 0;
 
-	$('body').animate({
+	$('body').stop().animate({
 		scrollTop: scrollDistance - offset
 	}, {
 		duration: 1000,

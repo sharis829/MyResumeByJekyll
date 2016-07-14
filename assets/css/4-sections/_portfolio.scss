@@ -1,14 +1,23 @@
-.section-portfolio{
+.section-portfolio {
     background-color: $alabaster;
-    a{
+    .container-fluid {
+        /* 手机尺寸 xs 768px以下 默认最大 400px */
+        max-width: 400px;
+        /* 其他尺寸 最大 1100px */
+        @include breakpoint(sm) {
+            max-width: $screen-lg;
+        }
+    }
+    a {
         display: block;
         position: relative;
     }
-    .layer{
+    .layer {
         background-color: rgba($color-primary,0.9);
-        position: absolute; /*todo in bourbon*/
+        position: absolute;
+        /*todo in bourbon*/
         top: 0;
-        bottom: 95px;
+        bottom: 0;
         left: 0;
         right: 0;
         opacity: 0;
@@ -16,31 +25,47 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        
-        &:hover{
+        &:hover {
             opacity: 1;
         }
     }
-    
-    .fa{
+    .fa {
         color: $white;
     }
-    
-    figure{
+    figure {
         margin-bottom: $space;
         padding-bottom: $space/2;
         background-color: $white;
     }
-    
-    figcaption{
-        h3{
+    figcaption {
+        h3 {
             padding-bottom: $space/4;
         }
-        
-        p{
+        p {
             color: $color-base;
             font-size: 1.5rem;
             font-style: italic;
+            margin: 0;
+        }
+    }
+}
+.modal-portfolio {
+    img{
+        margin-bottom: $space;
+    }
+    .meta-data {
+        color: $greyDark;
+        margin-bottom: $space;
+    }
+    li{
+        display: inline-block;
+    }
+    em {
+        color: $color-primary;
+        margin-right: $space;
+        font:{
+            weight: bold;
+            style: normal;
         }
     }
 }

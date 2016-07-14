@@ -1,0 +1,19 @@
+<section id='skills' class='section-skills'>
+	<div class='container'>
+		<h2>{{ site.data.layout.skills.title }}</h2>
+		<p class='section-description'></p>
+		{% for item in site.data.layout.skills.items %}
+			<div class='row'>
+				<div class='col-sm-2'>
+					<label class='skill-label'> {{ item.name }} </label>
+				</div>
+				<div class='col-sm-10'>
+					<div class="progress">
+					  <div class="progress-bar level-{{ item.level }}" role="progressbar">
+					  </div>
+					</div>
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+</section>

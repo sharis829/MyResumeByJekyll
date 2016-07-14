@@ -1,0 +1,37 @@
+<section id='career' class='section-career'>
+	<div class='container-fluid'>
+		<h2>{{ site.data.layout.career.title }}</h2>
+		<p class='section-description'>{{ site.data.layout.career.description }}</p>
+		<div class='row'>
+			<ul class='list-unstyled'>
+				{% for item in site.data.layout.career.items %}
+				<li>
+					<figure>
+						<div class='figure-img'>
+							<img src='{{site.html-img-path }}{{ item.thumb}}'>
+						</div>
+
+						<figcaption>
+							<h3>{{ item.year }}
+							<strong> {{ item.title }}</strong></h3>
+
+							<p> {{ item.introduction }}</p>
+						</figcaption>
+				</li>
+				{% endfor %}
+				<li>
+					<figure>
+						<div class='figure-img'>
+							<div class='img'>
+								<h3>
+								{{ site.data.layout.career.last-item-text}}
+							</h3>
+							</div>
+						</div>
+						<figcaption></figcaption>
+					</figure>
+				</li>
+			</ul>
+		</div>
+	</div>
+</section>

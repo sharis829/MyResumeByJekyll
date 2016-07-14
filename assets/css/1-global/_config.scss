@@ -19,23 +19,25 @@ $break-points: (
 // Descriptive colors, todo collect some regular colors, can be repleaced in bootstrap variables
 $white: #fff;
 $black: #000;
+$transparent: transparent;
+$error: palevioletred;
+
 $grey: #333;
-$greyDark: #222;
+$greyDark: #222; /* primary font color */
 $greyLight: #555;
-$gallery: #eee;
+
 $alto: #ddd;
 $mercury: #e9e9e9;
 $alabaster: #f7f7f7;
 $alabaster-light:#f1f1f1;
 $pelorous: #3dadb2;
-$transparent: transparent;
-$error: palevioletred;
+
 
 // Color usage 
 $color-primary-light: adjust-hue(lighten($color-primary,  4%),-1%);
 $color-primary-dark: darken($color-primary, 4%);
 $color-selection: $color-primary;
-$color-border: $alto;
+$color-border: $mercury;
 /* config 在tool 之前执行，所以警告框的颜色拿不到这个颜色，需要从bootstrap变量里拿过来使用 */
 $brand-danger:          #d9534f;
 $brand-success:         #5cb85c;
@@ -96,8 +98,9 @@ $alert-success-border: $brand-success;
 $btn-primary-color:              $white;
 $btn-primary-bg:                 $color-primary;
 
-
-
+$btn-default-bg:                 $color-base;
+$btn-default-border:             $color-base;
+$btn-default-color: $white;
 
 /* Navbar  
  * -------------------------------*/
@@ -135,6 +138,14 @@ $tooltip-bg:                  darken($color-primary, 10%);
  * -------------------------------*/
 // BOOTSTRAP OVERRIDE
 $dl-horizontal-offset:        0;
+
+/* Modal 
+ * -------------------------------*/
+// BOOTSTRAP OVERRIDE
+$modal-lg:                    100%;
+$modal-md:                    100%;
+$modal-sm:                    100%;
+
 
 
 /* Custom */

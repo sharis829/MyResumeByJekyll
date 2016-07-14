@@ -1,0 +1,20 @@
+.section-skills{
+	
+	.skill-label{
+		display: block;
+		margin-bottom: $space/2;
+		text-align: left;
+		
+		@include breakpoint(sm){
+		    text-align: right;
+		}
+		
+	}
+	
+	@for $var from 1 through 10{
+	    .level-#{$var}{
+            width: #{$var}0%;
+         }
+	}
+	  
+}

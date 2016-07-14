@@ -3,14 +3,80 @@
 ###
 
 ### navbar 
-navbar-menus: [Service, Portfolio, About, Team, Contact]
+navbar-menus: [About, Career, Skills, Portfolio, Contact]
 
 ### hero
 hero:
   title: "It's nice to meet you"
-  subtitle: Welcome To Our Studio!
-  btn-text: Tell Me More
+  subtitle: Welcome!
+  btn-text: Tell More about Me 
 
+###
+### About 
+###
+about:
+  title: About Me
+  description: 'I am a Senior UI front end engineer with many years of website development experience. Life is a continuous learning process, so work makes me more rigorous, travel makes my life more colorful. Work hard and play hard!'
+  name: Sharis.Gao
+  job-title: Senior UI Front-End developer
+  avatar: 'avatar.jpg'
+
+### 
+### Career
+###
+
+career:
+  title: Career
+  description: 'The outline of my whole career path.'
+  items:
+      - year: JUNE 2007 - JUNE 2010 
+        title: BearingPoint (PriceWaterHouse)
+        thumb: 'career\1.jpg'
+        introduction: 'I graudated from Donghua University and got my first job as a C# Net developer. I was busy with creating bugs and fixing bugs at my very beginning.'
+      
+      - year: JUNE 2010 - NOV 2010
+        title: A small Company called Dingyuan technology.
+        thumb: 'career\2.jpg'
+        introduction: 'I start to become interested in front end technology, self learn UI design, HTML CSS JS. Then I started my second job as a front end UI developer.'
+      
+      - year: NOV 2010 - OCT 2015
+        title: Dextrys and Oracle
+        thumb: 'career\3.jpg'
+        introduction: 'In these five years, I mainly focused in UI technology, including javascript, jQuery, CSS3, SASS, ExtJS, very stable, toooo stable..'
+      
+      - year: OCT 2015 - Present
+        title: Quit the job and Self-learn experience
+        thumb: 'career\4.jpg'
+        introduction: "I found many new technologies are springing up outside Oracle. They are growing so fast so I need to recatch up. I am very interested about jekyll which powers up the github blogs, which presents me a clear outline of how things organize each other. Angular and react are very popular, so I couldn\'t miss them."
+  
+  last-item-text: Future is a box of chocolate    
+
+###
+### Skills
+###
+skills:
+  title: Skills
+  items: 
+    - name: 'HTML'
+      level: '8'
+    - name: 'HTML5'
+      level: '4'
+    - name: 'CSS(3)'
+      level: '8'
+    - name: 'SASS'
+      level: '7'
+    - name: 'BOOTSTRAP'
+      level: '6'
+    - name: 'JAVASCRIPT'
+      level: '6'
+    - name: 'JQUERY'
+      level: '6'
+    
+    - name: 'GIT'
+      level: '5'
+    - name: 'ANGULAR'
+      level: '3'
+    
 
 ### 
 ### Service
@@ -96,37 +162,7 @@ portfolio:
       date: April 2014  
       service: Web Development
   
-### 
-### About
-###
 
-about:
-  title: About
-  description: 'Lorem ipsum dolor sit amet consectetur.'
-  items:
-      - year: 2009-2011
-        title: Our Humble Beginnings
-        thumb: 'about\1.jpg'
-        introduction: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!'
-      
-      - year: MARCH 2011
-        title: An Agency is Born
-        thumb: 'about\2.jpg'
-        introduction: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!'
-      
-      - year: DECEMBER 2012
-        title: Transition to Full Service
-        thumb: 'about\3.jpg'
-        introduction: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!'
-      
-      - year: JULY 2014
-        title: Phase Two Expansion
-        thumb: 'about\4.jpg'
-        introduction: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!'
-  
-  last-item-text: be part of our story    
-
-    
 ### 
 ### Team
 ###

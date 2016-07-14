@@ -42,6 +42,7 @@ h3 {
 }
 
 h4{
+    // modal title
     
 }
 
@@ -75,15 +76,27 @@ svg {
     height: 100%;
     width: 100%;
 }
+
+hr{
+    margin: $space 0;
+    border-top: 1px solid  $color-border;   
+}
+
 /* Section
  ---------------------------------*/
 section {
-    padding: $space*6 0;
-    @extend %align-center;
-}
-section:nth-child(odd) {
+    padding: $space*4 0;
+    @extend %align-center; /*也可以独立用 .text-center 类*/
+    
+    section:nth-child(odd) {
     //  background-color: $color-bg;
+    }
+    
+    @include breakpoint(sm){
+        padding: $space*6 0;
+    }
 }
+
 .section-description {
     font: {
         size: 1.6rem;

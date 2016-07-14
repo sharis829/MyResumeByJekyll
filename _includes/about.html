@@ -1,35 +1,27 @@
 <section id='about' class='section-about'>
 	<div class='container-fluid'>
-		<h2>{{ site.data.layout.about.title }}</h2>
-		<p class='section-description'>{{ site.data.layout.about.description }}</p>
-		<ul class='list-unstyled'>
-			{% for item in site.data.layout.about.items %}
-			<li>
+		<div class='row'>
+			<div class='col-sm-6 col-sm-offset-3'>
+				<h2>{{site.data.layout.about.title }}</h2>
+				<p class='section-description'>{{site.data.layout.about.description }}</p>		
+			</div>
+		</div>
+		<div class='row'>
+			<div class='col-sm-8 col-sm-offset-2'>
 				<figure>
-					<div class='figure-img'>
-						<img src='{{site.html-img-path }}{{ item.thumb}}'>
+					<div class='avatar center-block'>
 					</div>
-
 					<figcaption>
-						<h3>{{ item.year }}
-							<strong> {{ item.title }}</strong></h3>
-
-						<p> {{ item.introduction }}</p>
+						<h3>{{ site.data.layout.about.name }}</h3>
+						<p> {{ site.data.layout.about.job-title }}</p>
+						<footer>
+							<a href class='fa fa-twitter animated jello'></a>
+							<a href class='fa fa-facebook animated jello'></a>
+							<a href='https://github.com/' class='fa fa-github animated jello' ></a>
+						</footer>
 					</figcaption>
-			</li>
-			{% endfor %}
-			<li>
-				<figure>
-					<div class='figure-img'>
-						<div class='img'>
-							<h3>
-								{{ site.data.layout.about.last-item-text}}
-							</h3>
-						</div>
-					</div>
-					<figcaption></figcaption>
 				</figure>
-			</li>
-		</ul>
+			</div>
+		</div>
 	</div>
 </section>
