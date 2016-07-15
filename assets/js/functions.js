@@ -2,6 +2,18 @@ $(document).ready(function() {
 	headerSection();
 	portfolioSection();
 	contactSection();
+	
+	/*start up the wow.js to animate the dom marked with wow and effect */
+	wow = new WOW(
+      {
+        animateClass: 'animate',
+        offset:       100,
+        callback:     function(box) {
+          console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+        }
+      }
+    );
+    wow.init();
 });
 
 function headerSection() {
@@ -59,7 +71,7 @@ function headerSection() {
 			activeSection, // 要被滚动到的section
 			$activeNavItem; // 要被激活的nav item
 
-		/* scroll and animate the nav bar*/
+		/* scroll over about section and animate the nav bar*/
 		var offsetTop = $('.section-about').offset().top,
 			$navbar = $('.navbar');
 		if (offsetTop && scrollTop >= offsetTop / 2 && $(window).width() >= 768) {
@@ -67,6 +79,7 @@ function headerSection() {
 		} else {
 			$navbar.removeClass('animate');
 		}
+		
 
 	});
 }

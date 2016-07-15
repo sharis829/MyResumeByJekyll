@@ -58,7 +58,7 @@ skills:
   title: Skills
   items: 
     - name: 'HTML'
-      level: '8'
+      level: '9'
     - name: 'HTML5'
       level: '4'
     - name: 'CSS(3)'
@@ -71,7 +71,6 @@ skills:
       level: '6'
     - name: 'JQUERY'
       level: '6'
-    
     - name: 'GIT'
       level: '5'
     - name: 'ANGULAR'

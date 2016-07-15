@@ -5,11 +5,33 @@
 	    border-radius: 50%;
         border: 8px solid lightblue;
         @include square(240px);
+        position: relative;
         background:{
             image: url(#{$sass-img-url}#{$avatar-url});
             repeat: no-repeat;
             size: cover;
             position: 0px -50px; /*往上60px*/
+        }
+        @include transition(all 0.5s);
+        
+//      &:before{
+//          content:'';
+//          @include square(240px);
+//          border: 8px solid lightblue;
+//          border-radius: 50%;
+//          @include position(absolute, -8px -8px -8px -8px);
+//          transform: scale(1);
+//          opacity: 1;
+//          @include transition(all 0.5s);
+//      }
+//      
+//      &:hover:before{
+//          transform: scale(1.5);
+//          opacity: 0;
+//      }
+        
+        &:hover{
+            @include animation(hinge 1.0s ease-in);
         }
 	}
 	
