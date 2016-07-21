@@ -222,13 +222,14 @@ contact:
 ### Footer
 ###
 footer:
-   copyright: 'Copyright © Awesome Title 2014' 
+   copyright: 'Copyright © Sharis.Gao 2016' 
    links: 
        - 'twitter'
        - 'facebook'
        - 'stack-overflow'
        - 'bitbucket'
        - 'github'
+       
    policy: Privacy Policy 
    terms:  Terms of Use
 
